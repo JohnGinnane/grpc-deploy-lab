@@ -18,6 +18,7 @@ function err(callback, msg) {
 // service functions
 function srvAdd(call, callback) {
     try {
+        console.log("hello add");
         var A = parseInt(call.request.A);
         var B = parseInt(call.request.B);
     
