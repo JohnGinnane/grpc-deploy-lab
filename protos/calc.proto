@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package calc;
+
+service CalcService {
+    rpc add(CalcRequest)      returns (CalcResponse) {}
+    rpc subtract(CalcRequest) returns (CalcResponse) {}
+    rpc divide(CalcRequest)   returns (CalcResponse) {}
+    rpc multiply(CalcRequest) returns (CalcResponse) {}
+}
+
+message CalcRequest {
+    uint32 A = 1;
+    uint32 B = 2;
+}
+
+message CalcResponse {
+    uint32 result = 1;
+    string message = 2;
+}
